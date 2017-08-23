@@ -9,7 +9,8 @@
         var headline = document.getElementById('iframeheadline').value;
         var chatter = document.getElementById('iframechatter').value;
         var link = document.getElementById('iframelink').value.trim();
-        var iframe = scrubDivFromIframe(document.getElementById('iframeiframe').value.trim());
+        var iFrameCode = document.getElementById('iframeiframe').value.trim();
+        var iframe = iFrameCode.indexOf('<div') > -1 ? scrubDivFromIframe(iFrameCode) : iFrameCode;
         var exclusive = document.getElementById('iframe-exclusive').checked;
 
         var context = {
