@@ -1,4 +1,4 @@
-##SAEN Freeform Code Generator##
+## SAEN Freeform Code Generator ##
 
 This tool generates HTML code you can use for freeforms on the Express-News home page. The generator [lives on our S3 server,](https://s3.amazonaws.com/projects.expressnews.com/freeform-generator/index.html) should you need to use it.
 
