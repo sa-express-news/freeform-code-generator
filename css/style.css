@@ -1,0 +1,25 @@
+div.main-container {
+	padding:1em;
+    width: 100%;
+}
+
+xmp {
+	line-height: 1.1;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.copy-button{
+	display: none;
+}
+
+@media (min-width: 800px){
+	div.main-container{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	div.main-container > div{
+		flex-basis: 50%;
+	}
+}

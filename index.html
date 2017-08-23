@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SAEN Freeform Code Generator</title>
+</head>
+
+<body>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">iFrame/Video</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Story</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="main-container">
+                <div class="form-container">
+                    <form id="iframe-form">
+                        <div class="form-group">
+                            <label for="iframeheadline">Headline</label>
+                            <input type="text" class="form-control" id="iframeheadline" placeholder="A loss far from home" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="iframechatter">Chatter/subhead</label>
+                            <textarea class="form-control" id="iframechatter" rows="3" placeholder="At 22, Mohamed Sharib Bin Mohamed Ali, a refugee with his parents and two of his siblings, was the heart of his Rohingya family." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="iframelink">Link to published story</label>
+                            <textarea class="form-control" id="iframelink" rows="3" placeholder="http://www.expressnews.com/lifestyle/article/S-A-man-key-to-Voyager-space-missions-featured-11947245.php" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="iframeiframe">iFrame code</label>
+                            <textarea class="form-control" id="iframeiframe" rows="3" placeholder="" required></textarea>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" id="iframe-exclusive"> EN Exclusive?
+                            </label>
+                        </div>
+                        <button class="btn btn-primary" id="build-iframe">Build freeform</button>
+                    </form>
+                </div>
+                <div>
+                    <div class='iframe-code-container'>
+                    </div>
+                    <button class="btn btn-primary copy-button" id="copy-iframe-code">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="main-container">
+                <div class="form-container">
+                    <form id="story-form">
+                        <div class="form-group">
+                            <label for="storyHeadline">Headline</label>
+                            <input type="text" class="form-control" id="storyHeadline" placeholder="A loss far from home" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="storyChatter">Chatter/subhead</label>
+                            <textarea class="form-control" id="storyChatter" rows="3" placeholder="At 22, Mohamed Sharib Bin Mohamed Ali, a refugee with his parents and two of his siblings, was the heart of his Rohingya family." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="storyLink">Link to published story</label>
+                            <textarea class="form-control" id="storyLink" rows="3" placeholder="http://www.expressnews.com/lifestyle/article/S-A-man-key-to-Voyager-space-missions-featured-11947245.php" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="storyImage">Image link</label>
+                            <textarea class="form-control" id="storyImage" rows="3" placeholder="" required></textarea>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" id="storyExclusive"> EN Exclusive?
+                            </label>
+                        </div>
+                        <button class="btn btn-primary" id="build-story">Build freeform</button>
+                    </form>
+                </div>
+                <div>
+                    <div class='story-code-container'>
+                    </div>
+                    <button class="btn btn-primary copy-button" id="copy-story-code">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.runtime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js
+"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/templates.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
