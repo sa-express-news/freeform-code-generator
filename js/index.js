@@ -9,7 +9,7 @@
         var headline = document.getElementById('iframeheadline').value;
         var chatter = document.getElementById('iframechatter').value;
         var link = document.getElementById('iframelink').value.trim();
-        var iframe = document.getElementById('iframeiframe').value.trim();
+        var iframe = scrubDivFromIframe(document.getElementById('iframeiframe').value.trim());
         var exclusive = document.getElementById('iframe-exclusive').checked;
 
         var context = {
@@ -107,4 +107,11 @@
         var closeRE = new RegExp(close, 'g');
 
         return string.replace(openRE, '').replace(closeRE, '');
+    }
+
+    function scrubDivFromIframe(string){
+        var div = document.createElement('div');
+        div.innerHTML = string;
+        div.innerHTML = div.getElementsByTagName('div')[0].innerHTML;
+        return div.innerHTML;
     }
