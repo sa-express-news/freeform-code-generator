@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "hbars": "handlebars src/ -f src/test.ts"
+    "handlebars": "handlebars js/ -f js/templates.js"
   },
   "author": "Kia Farhang",
   "license": "ISC",
