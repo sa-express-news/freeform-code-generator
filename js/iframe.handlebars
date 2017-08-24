@@ -36,8 +36,11 @@
             </style>
             {{#if exclusive}}
             <h3 class="freeform-iframe-exclusive section-name">ExpressNews.com Exclusive</h3> {{/if}}
-            <h2 class="freeform-iframe-headline">
-<a href="{{storyLink}}">{{headline}}</a></h2>
+            {{#if storyLink}}
+            <h2 class="freeform-iframe-headline"><a href="{{storyLink}}">{{headline}}</a></h2>
+            {{else}}
+        <h2 class="freeform-iframe-headline">{{headline}}</h2>
+            {{/if}}
             <p class="freeform-iframe-subhead">{{chatter}}</p>
             <div class="vidWrapper">
                 {{{iframe}}}
