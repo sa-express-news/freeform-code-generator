@@ -12,14 +12,17 @@
 <body>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">iFrame/Video</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#iframeformcontainer" role="tab" aria-controls="home" aria-expanded="true">iFrame/Video</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Story</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#storyformcontainer" role="tab" aria-controls="profile">Story</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#atfformcontainer" role="tab" aria-controls="profile">ATF</a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane fade show active" id="iframeformcontainer" role="tabpanel" aria-labelledby="iframe-tab">
             <div class="main-container">
                 <div class="form-container">
                     <form id="iframe-form">
@@ -54,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="tab-pane fade" id="storyformcontainer" role="tabpanel" aria-labelledby="story-tab">
             <div class="main-container">
                 <div class="form-container">
                     <form id="story-form">
@@ -86,6 +89,37 @@
                     <div class='story-code-container'>
                     </div>
                     <button class="btn btn-primary copy-button" id="copy-story-code">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="atfformcontainer" role="tabpanel" aria-labelledby="atf-tab">
+            <div class="main-container">
+                <div class="atf-container">
+                    <form id="atf-form">
+                        <div class="form-group">
+                            <label for="atfHeadline">Headline</label>
+                            <input type="text" class="form-control" id="atfHeadline" placeholder="Chuck's Food Shack: New Alamo Ranch barbecue truck" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="atfLink">Link to published story</label>
+                            <textarea class="form-control" id="atfLink" rows="3" placeholder="http://www.expressnews.com/food/columnists/chuck_blount/article/New-Alamo-Ranch-barbecue-truck-earning-serious-12104022.php" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="atfImage">Image link</label>
+                            <textarea class="form-control" id="atfImage" rows="3" placeholder="http://ww1.hdnux.com/photos/65/34/10/14008840/5/rawImage.jpg --- Remember to change the end to rawImage!" required></textarea>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" id="atfExclusive"> EN Exclusive?
+                            </label>
+                        </div>
+                        <button class="btn btn-primary" id="build-atf">Build freeform</button>
+                    </form>
+                </div>
+                <div>
+                    <div class='atf-code-container'>
+                    </div>
+                    <button class="btn btn-primary copy-button" id="copy-atf-code">Copy</button>
                 </div>
             </div>
         </div>

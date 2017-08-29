@@ -4,6 +4,9 @@
     document.getElementById('story-form').addEventListener('submit', storySubmit);
     document.getElementById('copy-story-code').addEventListener('click', copyStoryCode);
 
+    document.getElementById('atf-form').addEventListener('submit', atfSubmit);
+    document.getElementById('copy-atf-code').addEventListener('click', copyAtfCode);
+
     function iframeSubmit(event) {
         event.preventDefault();
         var headline = document.getElementById('iframeheadline').value;
@@ -72,6 +75,36 @@
 
     }
 
+    function atfSubmit(event) {
+        event.preventDefault();
+        var headline = document.getElementById('atfHeadline').value;
+        var link = document.getElementById('atfLink').value.trim();
+        var image = document.getElementById('atfImage').value.trim();
+        var exclusive = document.getElementById('atfExclusive').checked;
+
+        var context = {
+            storyLink: link,
+            headline: headline,
+            image: image,
+            exclusive: exclusive
+        };
+
+        generateAtfCode(context);
+        showCopyButton();
+
+        function showCopyButton() {
+            var button = document.getElementById('copy-atf-code');
+            button.style.display = 'block';
+        }
+
+        function generateAtfCode(context) {
+            var html = Handlebars.templates.atf(context);
+            var div = document.getElementsByClassName('atf-code-container')[0];
+            div.innerHTML = html;
+        }
+
+    }
+
     function copyiFrameCode() {
         var textArea = document.createElement('textarea');
         var stringWithoutXmp = clearXmpFromString(document.getElementsByClassName('iframe-code-container')[0].innerHTML);
@@ -101,7 +134,22 @@
         }
     }
 
-    function clearXmpFromString(string){
+    function copyAtfCode() {
+        var textArea = document.createElement('textarea');
+        var stringWithoutXmp = clearXmpFromString(document.getElementsByClassName('atf-code-container')[0].innerHTML);
+        textArea.value = stringWithoutXmp;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    function clearXmpFromString(string) {
         var open = '<xmp>';
         var close = '</xmp>';
         var openRE = new RegExp(open, 'g');
@@ -110,7 +158,7 @@
         return string.replace(openRE, '').replace(closeRE, '');
     }
 
-    function scrubDivFromIframe(string){
+    function scrubDivFromIframe(string) {
         var div = document.createElement('div');
         div.innerHTML = string;
         div.innerHTML = div.getElementsByTagName('div')[0].innerHTML;
