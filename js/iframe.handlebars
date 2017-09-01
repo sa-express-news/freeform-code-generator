@@ -41,7 +41,9 @@
             {{else}}
         <h2 class="freeform-iframe-headline">{{headline}}</h2>
             {{/if}}
+            {{#if chatter}}
             <p class="freeform-iframe-subhead">{{chatter}}</p>
+            {{/if}}
             <div class="vidWrapper">
                 {{{iframe}}}
             </div>
