@@ -1,18 +1,30 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
 templates['atf'] = template({"1":function(container,depth0,helpers,partials,data) {
-    return "  <h3 class=\"section-name freeform-exclusive\" style=\"text-align:center;\">ExpressNews.com Exclusive</h3>\n";
-},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+    return "  <h3 class=\"section-name freeform-exclusive\" style=\"text-align:center;\">ExpressNews.com Exclusive</h3>\n  ";
+},"3":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<xmp>\n<style>\n\n  img.freeform-atf-photo {\n    margin: 1em 0;\n    width: 100%;\n  }\n\n  h3.freeform-exclusive{\n    text-align: center;\n  }\n \n  h2.freeform-atf-headline {\n    font-family: Pierpont-bold, serif;\n    font-size: 29px;\n    font-weight: normal;\n    line-height: 38px;\n    margin: 1% auto;\n    text-align: center;\n  }\n \n  @media (min-width: 1280px) {\n    h2.freeform-atf-headline {\n      font-size: 26px;\n    }\n  }\n</style>\n\n"
-    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.exclusive : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\n<a href=\""
+  return "\n  <a href=\""
     + alias4(((helper = (helper = helpers.storyLink || (depth0 != null ? depth0.storyLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"storyLink","hash":{},"data":data}) : helper)))
-    + "\">\n  <h2 class=\"freeform-atf-headline\">"
+    + "\">\n    <h2 class=\"freeform-atf-headline\">"
     + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
-    + "</h2></a>\n\n <img class=\"freeform-atf-photo\" src=\""
-    + alias4(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image","hash":{},"data":data}) : helper)))
+    + "</h2>\n  </a>\n";
+},"5":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "  <h2 class=\"freeform-atf-headline\">"
+    + container.escapeExpression(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"headline","hash":{},"data":data}) : helper)))
+    + "</h2>\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "<xmp>\n  <style>\n    img.freeform-atf-photo {\n      margin: 1em 0;\n      width: 100%;\n    }\n\n    h3.freeform-exclusive {\n      text-align: center;\n    }\n\n    h2.freeform-atf-headline {\n      font-family: Pierpont-bold, serif;\n      font-size: 29px;\n      font-weight: normal;\n      line-height: 38px;\n      margin: 1% auto;\n      text-align: center;\n    }\n\n    @media (min-width: 1280px) {\n      h2.freeform-atf-headline {\n        font-size: 26px;\n      }\n    }\n  </style>\n\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.exclusive : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + " "
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.storyLink : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.program(5, data, 0),"data":data})) != null ? stack1 : "")
+    + "  <img class=\"freeform-atf-photo\" src=\""
+    + container.escapeExpression(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"image","hash":{},"data":data}) : helper)))
     + "\">\n</xmp>";
 },"useData":true});
 templates['iframe'] = template({"1":function(container,depth0,helpers,partials,data) {
