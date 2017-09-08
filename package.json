@@ -4,7 +4,6 @@
   "description": "Generate freeform code for use on the SAEN home page.",
   "main": "index.js",
   "scripts": {
-    "test": "test",
     "handlebars": "handlebars js/ -f js/templates.js"
   },
   "author": "Kia Farhang",

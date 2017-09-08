@@ -1,37 +1,38 @@
 <xmp>
-<style>
-
-  img.freeform-atf-photo {
-    margin: 1em 0;
-    width: 100%;
-  }
-
-  h3.freeform-exclusive{
-    text-align: center;
-  }
- 
-  h2.freeform-atf-headline {
-    font-family: Pierpont-bold, serif;
-    font-size: 29px;
-    font-weight: normal;
-    line-height: 38px;
-    margin: 1% auto;
-    text-align: center;
-  }
- 
-  @media (min-width: 1280px) {
-    h2.freeform-atf-headline {
-      font-size: 26px;
+  <style>
+    img.freeform-atf-photo {
+      margin: 1em 0;
+      width: 100%;
     }
-  }
-</style>
 
-{{#if exclusive}}
+    h3.freeform-exclusive {
+      text-align: center;
+    }
+
+    h2.freeform-atf-headline {
+      font-family: Pierpont-bold, serif;
+      font-size: 29px;
+      font-weight: normal;
+      line-height: 38px;
+      margin: 1% auto;
+      text-align: center;
+    }
+
+    @media (min-width: 1280px) {
+      h2.freeform-atf-headline {
+        font-size: 26px;
+      }
+    }
+  </style>
+
+  {{#if exclusive}}
   <h3 class="section-name freeform-exclusive" style="text-align:center;">ExpressNews.com Exclusive</h3>
-{{/if}}
-
-<a href="{{storyLink}}">
-  <h2 class="freeform-atf-headline">{{headline}}</h2></a>
-
- <img class="freeform-atf-photo" src="{{image}}">
+  {{/if}} {{#if storyLink}}
+  <a href="{{storyLink}}">
+    <h2 class="freeform-atf-headline">{{headline}}</h2>
+  </a>
+  {{else}}
+  <h2 class="freeform-atf-headline">{{headline}}</h2>
+  {{/if}}
+  <img class="freeform-atf-photo" src="{{image}}">
 </xmp>
