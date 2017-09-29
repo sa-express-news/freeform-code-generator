@@ -9,6 +9,10 @@ xmp {
     word-wrap: break-word;
 }
 
+.bold{
+	font-weight: bold;
+}
+
 .copy-button{
 	display: none;
 }
