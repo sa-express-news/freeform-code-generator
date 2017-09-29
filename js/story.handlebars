@@ -46,6 +46,7 @@
   <img class="freeform-cp-photo" src="{{image}}">
 
   <p class="freeform-cp-subhead">
-    <span class="freeform-cp-dropcap">{{firstLetter}}</span>{{chatter}}
+    {{#if dropcap}}
+    <span class="freeform-cp-dropcap">{{firstLetter}}</span>{{chatter}} {{else}} {{firstLetter}}{{chatter}}{{/if}}
   </p>
 </xmp>
