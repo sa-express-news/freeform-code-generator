@@ -1,50 +1,48 @@
 <xmp>
-            <style>
-            h3.freeform-iframe-exclusive {
-                text-align: center;
-            }
+    <style>
+        h3.freeform-iframe-exclusive {
+            text-align: center;
+        }
 
-            h2.freeform-iframe-headline {
-                font-family: Pierpont-bold, serif;
-                font-size: 44px;
-                line-height: 38px;
-                margin: 1% auto;
-                text-align: center;
-            }
+        h2.freeform-iframe-headline {
+            font-family: Pierpont-bold, serif;
+            font-size: 42px;
+            line-height: 36px;
+            margin: 1% auto;
+            text-align: center;
+        }
 
-            p.freeform-iframe-subhead {
-                font-family: Georgia, serif;
-                font-size: 18px;
-                text-align: center;
-            }
+        p.freeform-iframe-subhead {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            text-align: center;
+        }
 
-            .vidWrapper {
-                margin-bottom: 1em;
-                position: relative;
-                padding-bottom: 56.25%;
-                padding-top: 25px;
-                height: 0;
-            }
+        .vidWrapper {
+            margin-bottom: 1em;
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 25px;
+            height: 0;
+        }
 
-            .vidWrapper iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 94%;
-            }
-            </style>
-            {{#if exclusive}}
-            <h3 class="freeform-iframe-exclusive section-name">ExpressNews.com Exclusive</h3> {{/if}}
-            {{#if storyLink}}
-            <h2 class="freeform-iframe-headline"><a href="{{storyLink}}">{{headline}}</a></h2>
-            {{else}}
-        <h2 class="freeform-iframe-headline">{{headline}}</h2>
-            {{/if}}
-            {{#if chatter}}
-            <p class="freeform-iframe-subhead">{{chatter}}</p>
-            {{/if}}
-            <div class="vidWrapper">
-                {{{iframe}}}
-            </div>
-        </xmp>
+        .vidWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 94%;
+        }
+    </style>
+    {{#if exclusive}}
+    <h3 class="freeform-iframe-exclusive section-name">ExpressNews.com Exclusive</h3> {{/if}} {{#if storyLink}}
+    <h2 class="freeform-iframe-headline"><a href="{{storyLink}}">{{headline}}</a></h2>
+    {{else}}
+    <h2 class="freeform-iframe-headline">{{headline}}</h2>
+    {{/if}} {{#if chatter}}
+    <p class="freeform-iframe-subhead">{{chatter}}</p>
+    {{/if}}
+    <div class="vidWrapper">
+        {{{iframe}}}
+    </div>
+</xmp>

@@ -1,51 +1,51 @@
 <xmp>
-<style>
-
-  img.freeform-cp-photo {
-    margin: 1em 0;
-    width: 100%;
-  }
-
-  h3.freeform-exclusive{
-    text-align: center;
-  }
- 
-  h2.freeform-cp-headline {
-    font-family: Pierpont-bold, serif;
-    font-size: 44px;
-    line-height: 38px;
-    margin: 1% auto;
-    text-align: center;
-  }
- 
-  @media (min-width: 1280px) {
-    h2.freeform-cp-headline {
-      font-size: 35px;
+  <style>
+    img.freeform-cp-photo {
+      margin: 1em 0;
+      width: 100%;
     }
-  }
- 
-  p.freeform-cp-subhead {
-    font-family: Georgia, serif;
-    font-size: 18px;
-  }
- 
-  span.freeform-cp-dropcap {
-    font-family: Pierpont-bold, serif;
-    font-size: 32px;
-    font-weight: bold;
-  }
-</style>
 
-{{#if exclusive}}
+    h3.freeform-exclusive {
+      text-align: center;
+    }
+
+    h2.freeform-cp-headline {
+      font-family: Pierpont-bold, serif;
+      font-size: 42px;
+      line-height: 36px;
+      margin: 1% auto;
+      text-align: center;
+    }
+
+    @media (min-width: 1280px) {
+      h2.freeform-cp-headline {
+        font-size: 33px;
+      }
+    }
+
+    p.freeform-cp-subhead {
+      font-family: Georgia, serif;
+      font-size: 18px;
+    }
+
+    span.freeform-cp-dropcap {
+      font-family: Pierpont-bold, serif;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  </style>
+
+  {{#if exclusive}}
   <h3 class="section-name freeform-exclusive" style="text-align:center;">ExpressNews.com Exclusive</h3>
-{{/if}}
+  {{/if}}
 
-<a href="{{storyLink}}">
-  <h2 class="freeform-cp-headline">{{headline}}</h2></a>
+  <a href="{{storyLink}}">
+    <h2 class="freeform-cp-headline">{{headline}}</h2>
+  </a>
 
- <img class="freeform-cp-photo" src="{{image}}">
+  <img class="freeform-cp-photo" src="{{image}}">
 
- <p class="freeform-cp-subhead">
-  <span class="freeform-cp-dropcap">{{firstLetter}}</span>{{chatter}}
- </p>
+  <p class="freeform-cp-subhead">
+    <span class="freeform-cp-dropcap">{{firstLetter}}</span>{{chatter}}
+  </p>
 </xmp>
