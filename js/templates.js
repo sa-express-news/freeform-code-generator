@@ -62,6 +62,29 @@ templates['iframe'] = template({"1":function(container,depth0,helpers,partials,d
     + ((stack1 = ((helper = (helper = helpers.iframe || (depth0 != null ? depth0.iframe : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"iframe","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "\n    </div>\n</xmp>";
 },"useData":true});
+templates['related-feature-sidebar'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "<xmp>\n    <style>\n        .related-project-box {\n            border-top: 5px solid #ccc;\n            border-bottom: 1px solid #ccc;\n            width: 100%;\n            margin: 0 0 24px 0;\n            float: right;\n            clear: right;\n        }\n\n        .related-project-box h2 {\n            font-family: Sanchez Bold, helvetica, sans-serif;\n            font-size: 14px;\n            font-weight: normal;\n            color: #222;\n            text-transform: uppercase;\n            width: 100%;\n            background: transparent;\n            line-height: 30px;\n            height: 30px;\n            border-bottom: 1px solid #ccc;\n            margin: 0 0 16px 0;\n            padding: 0;\n        }\n\n        .related-project-box .img-wrap {\n            width: 100%;\n            height: 200px;\n            margin: 0;\n            padding: 0;\n            position: relative;\n            overflow: hidden;\n        }\n\n        .related-project-box .img-wrap img {\n            width: 100%;\n            height: auto;\n            position: absolute;\n            top: -9999px;\n            bottom: -9999px;\n            left: -9999px;\n            right: -9999px;\n            margin: auto;\n        }\n\n        .related-project-box h3 {\n            font-family: Pierpont-bold, serif;\n            font-size: 32px;\n            line-height: 36px;\n            margin: 1% auto;\n            text-align: left;\n        }\n\n        .related-project-box p {\n            font-family: Georgia, serif;\n            font-size: 14px;\n            line-height: 24px;\n        }\n\n        @media (min-width: 768px) {\n            .related-project-box {\n                width: 300px;\n                margin: 0 0 40px 68px;\n            }\n        }\n    </style>\n\n    <div class=\"related-project-box\">\n        <h2>Related Feature</h2>\n        <div class=\"img-wrap\">\n            <a href=\""
+    + alias4(((helper = (helper = helpers.storyLink || (depth0 != null ? depth0.storyLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"storyLink","hash":{},"data":data}) : helper)))
+    + "\" title=\""
+    + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
+    + "\">\n                <img src=\""
+    + alias4(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image","hash":{},"data":data}) : helper)))
+    + "\" />\n            </a>\n        </div>\n        <a href=\""
+    + alias4(((helper = (helper = helpers.storyLink || (depth0 != null ? depth0.storyLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"storyLink","hash":{},"data":data}) : helper)))
+    + "\" title=\""
+    + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
+    + "\">\n            <h3>"
+    + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
+    + "</h3>\n        </a>\n        <p>"
+    + alias4(((helper = (helper = helpers.chatter || (depth0 != null ? depth0.chatter : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"chatter","hash":{},"data":data}) : helper)))
+    + "\n            <a href=\""
+    + alias4(((helper = (helper = helpers.storyLink || (depth0 != null ? depth0.storyLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"storyLink","hash":{},"data":data}) : helper)))
+    + "\" title=\""
+    + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
+    + "\">Read now.</a>\n        </p>\n    </div>\n</xmp>";
+},"useData":true});
 templates['story'] = template({"1":function(container,depth0,helpers,partials,data) {
     return "  <h3 class=\"section-name freeform-exclusive\" style=\"text-align:center;\">ExpressNews.com Exclusive</h3>\n";
 },"3":function(container,depth0,helpers,partials,data) {
