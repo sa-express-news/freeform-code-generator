@@ -25,12 +25,7 @@ function iframeSubmit(event) {
     };
 
     generateiFrameCode(context);
-    showCopyButton();
-
-    function showCopyButton() {
-        var button = document.getElementById('copy-iframe-code');
-        button.style.display = 'block';
-    }
+    displayCopyButton('#copy-iframe-code');
 
     function generateiFrameCode(context) {
         var html = Handlebars.templates.iframe(context);
@@ -62,12 +57,7 @@ function storySubmit(event) {
     };
 
     generateStoryCode(context);
-    showCopyButton();
-
-    function showCopyButton() {
-        var button = document.getElementById('copy-story-code');
-        button.style.display = 'block';
-    }
+    displayCopyButton('#copy-story-code');
 
     function generateStoryCode(context) {
         var html = Handlebars.templates.story(context);
@@ -92,12 +82,7 @@ function atfSubmit(event) {
     };
 
     generateAtfCode(context);
-    showCopyButton();
-
-    function showCopyButton() {
-        var button = document.getElementById('copy-atf-code');
-        button.style.display = 'block';
-    }
+    displayCopyButton('#copy-atf-code');
 
     function generateAtfCode(context) {
         var html = Handlebars.templates.atf(context);
@@ -105,18 +90,6 @@ function atfSubmit(event) {
         div.innerHTML = html;
     }
 
-}
-
-function copyiFrameCode() {
-    return copyContentsOfSelector('div.iframe-code-container');
-}
-
-function copyStoryCode() {
-    return copyContentsOfSelector('div.story-code-container');
-}
-
-function copyAtfCode() {
-    return copyContentsOfSelector('div.atf-code-container');
 }
 
 function copyContentsOfSelector(selector) {
@@ -131,6 +104,23 @@ function copyContentsOfSelector(selector) {
     } catch (err) {
         console.log(err);
     }
+}
+
+function displayCopyButton(selector) {
+    var button = document.querySelector(selector);
+    button.style.display = 'block';
+}
+
+function copyiFrameCode() {
+    return copyContentsOfSelector('div.iframe-code-container');
+}
+
+function copyStoryCode() {
+    return copyContentsOfSelector('div.story-code-container');
+}
+
+function copyAtfCode() {
+    return copyContentsOfSelector('div.atf-code-container');
 }
 
 
