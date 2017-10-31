@@ -24,16 +24,8 @@ function iframeSubmit(event) {
         exclusive: exclusive
     };
 
-    generateiFrameCode(context);
+    generateTemplateCode('iframe', context, 'div.iframe-code-container');
     displayCopyButton('#copy-iframe-code');
-
-    function generateiFrameCode(context) {
-        var html = Handlebars.templates.iframe(context);
-        var div = document.getElementsByClassName('iframe-code-container')[0];
-        div.innerHTML = html;
-    }
-
-
 }
 
 function storySubmit(event) {
@@ -56,15 +48,8 @@ function storySubmit(event) {
         dropcap: dropcap
     };
 
-    generateStoryCode(context);
+    generateTemplateCode('story', context, 'div.story-code-container');
     displayCopyButton('#copy-story-code');
-
-    function generateStoryCode(context) {
-        var html = Handlebars.templates.story(context);
-        var div = document.getElementsByClassName('story-code-container')[0];
-        div.innerHTML = html;
-    }
-
 }
 
 function atfSubmit(event) {
@@ -81,15 +66,14 @@ function atfSubmit(event) {
         exclusive: exclusive
     };
 
-    generateAtfCode(context);
+    generateTemplateCode('atf', context, 'div.atf-code-container');
     displayCopyButton('#copy-atf-code');
+}
 
-    function generateAtfCode(context) {
-        var html = Handlebars.templates.atf(context);
-        var div = document.getElementsByClassName('atf-code-container')[0];
-        div.innerHTML = html;
-    }
-
+function generateTemplateCode(handlebarsTemplate, context, selector) {
+    var html = Handlebars.templates[handlebarsTemplate](context);
+    var target = document.querySelector(selector);
+    target.innerHTML = html;
 }
 
 function copyContentsOfSelector(selector) {
