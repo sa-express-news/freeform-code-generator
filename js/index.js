@@ -108,37 +108,20 @@ function atfSubmit(event) {
 }
 
 function copyiFrameCode() {
-    var textArea = document.createElement('textarea');
-    var stringWithoutXmp = clearXmpFromString(document.getElementsByClassName('iframe-code-container')[0].innerHTML);
-    textArea.value = stringWithoutXmp;
-    document.body.appendChild(textArea);
-    textArea.select();
-    try {
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-    } catch (err) {
-        console.log(err);
-    }
-
+    return copyContentsOfSelector('div.iframe-code-container');
 }
 
 function copyStoryCode() {
-    var textArea = document.createElement('textarea');
-    var stringWithoutXmp = clearXmpFromString(document.getElementsByClassName('story-code-container')[0].innerHTML);
-    textArea.value = stringWithoutXmp;
-    document.body.appendChild(textArea);
-    textArea.select();
-    try {
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-    } catch (err) {
-        console.log(err);
-    }
+    return copyContentsOfSelector('div.story-code-container');
 }
 
 function copyAtfCode() {
+    return copyContentsOfSelector('div.atf-code-container');
+}
+
+function copyContentsOfSelector(selector) {
     var textArea = document.createElement('textarea');
-    var stringWithoutXmp = clearXmpFromString(document.getElementsByClassName('atf-code-container')[0].innerHTML);
+    var stringWithoutXmp = clearXmpFromString(document.querySelector(selector).innerHTML);
     textArea.value = stringWithoutXmp;
     document.body.appendChild(textArea);
     textArea.select();
