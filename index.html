@@ -21,6 +21,9 @@
         <li class="nav-item">
             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#atfformcontainer" role="tab" aria-controls="profile">ATF</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#relatedsidebarcontainer" role="tab" aria-controls="profile">ATF</a>
+        </li>
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="iframeformcontainer" role="tabpanel" aria-labelledby="iframe-tab">
@@ -131,6 +134,39 @@
                     <div class='atf-code-container'>
                     </div>
                     <button class="btn btn-primary copy-button" id="copy-atf-code">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade show active" id="relatedsidebarcontainer" role="tabpanel" aria-labelledby="related-sidebar-tab">
+            <div class="main-container">
+                <div class="form-container">
+                    <form id="related-sidebar-form">
+                        <div class="form-group">
+                            <label for="sidebarheadline" class='bold'>Headline</label>
+                            <input type="text" class="form-control" id="sidebarheadline" placeholder="Boerne still charms but growth beckons" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sidebarchatter">Chatter/subhead</label>
+                            <textarea class="form-control" id="sidebarchatter" rows="3" placeholder="Good schools and quality of life have driven rapid growth in Boerne and the rest of Kendall County. But how does a small
+                            town handle sudden urbanization and affluence?" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="sidebarlink">Link to published story</label>
+                            <textarea class="form-control" id="sidebarlink" rows="3" placeholder="http://www.expressnews.com/news/local/article/Boerne-boom-comes-at-a-price-12241509.php"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="sidebarimage" class='bold'>Image Link</label>
+                            <textarea class="form-control" id="sidebarimage" rows="3" placeholder="http://ww2.hdnux.com/photos/66/26/15/14246721/3/rawImage.jpg - remember to change the end to rawImage!"
+                                required></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="build-sidebar">Build freeform</button>
+                    </form>
+                </div>
+                <div>
+                    <div class='sidebar-code-container'>
+                    </div>
+                    <button class="btn btn-primary copy-button" id="copy-sidebar-code">Copy</button>
                 </div>
             </div>
         </div>
