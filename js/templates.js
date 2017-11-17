@@ -65,17 +65,17 @@ templates['iframe'] = template({"1":function(container,depth0,helpers,partials,d
 templates['related-feature-block'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<xmp>\n    <style>\n        img.freeform-cp-photo {\n            margin: 1em 0;\n            width: 100%;\n        }\n\n        h3.freeform-exclusive {\n            text-align: left;\n            font-weight: bold;\n        }\n\n        h2.freeform-cp-headline {\n            font-family: Pierpont-bold, serif;\n            font-size: 42px;\n            line-height: 36px;\n            margin: 1% auto;\n            text-align: left;\n        }\n\n        @media (min-width: 1280px) {\n            h2.freeform-cp-headline {\n                font-size: 33px;\n            }\n        }\n\n        p.freeform-cp-subhead {\n            font-family: Georgia, serif;\n            font-size: 20px;\n            width: 100%;\n        }\n\n        span.freeform-cp-dropcap {\n            font-family: Pierpont-bold, serif;\n            font-size: 32px;\n            font-weight: bold;\n        }\n    </style>\n\n</xmp>\n\n<div class=\"solo_triple\">\n</div>\n\n<h3 class=\"section-name freeform-exclusive\" style=\"text-align:left;\">Related Feature</h3>\n\n<a href=\""
+  return "<xmp>\n    <style>\n        img.freeform-cp-photo {\n            margin: 1em 0;\n            width: 100%;\n        }\n\n        h3.freeform-exclusive {\n            text-align: left;\n            font-weight: bold;\n        }\n\n        h2.freeform-cp-headline {\n            font-family: Pierpont-bold, serif;\n            font-size: 42px;\n            line-height: 36px;\n            margin: 1% auto;\n            text-align: left;\n        }\n\n        @media (min-width: 1280px) {\n            h2.freeform-cp-headline {\n                font-size: 33px;\n            }\n        }\n\n        p.freeform-cp-subhead {\n            font-family: Georgia, serif;\n            font-size: 20px;\n            width: 100%;\n        }\n\n        span.freeform-cp-dropcap {\n            font-family: Pierpont-bold, serif;\n            font-size: 32px;\n            font-weight: bold;\n        }\n\n        .related-block a:hover {\n            text-decoration: none;\n        }\n    </style>\n\n    <div class=\"related-block\">\n        <div class=\"solo_triple\">\n        </div>\n\n        <h3 class=\"section-name freeform-exclusive\" style=\"text-align:left;\">Related Feature</h3>\n\n        <a href=\""
     + alias4(((helper = (helper = helpers.storyLink || (depth0 != null ? depth0.storyLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"storyLink","hash":{},"data":data}) : helper)))
     + "\" title=\""
     + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
-    + "\">\n    <h2 class=\"freeform-cp-headline\">"
+    + "\">\n            <h2 class=\"freeform-cp-headline\">"
     + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
-    + "</h2>\n    <img class=\"freeform-cp-photo\" src=\""
+    + "</h2>\n            <img class=\"freeform-cp-photo\" src=\""
     + alias4(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image","hash":{},"data":data}) : helper)))
-    + "\">\n</a>\n\n<p class=\"freeform-cp-subhead\">"
+    + "\">\n        </a>\n\n        <p class=\"freeform-cp-subhead\">"
     + alias4(((helper = (helper = helpers.chatter || (depth0 != null ? depth0.chatter : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"chatter","hash":{},"data":data}) : helper)))
-    + "</p>";
+    + "</p>\n    </div>\n\n</xmp>";
 },"useData":true});
 templates['related-feature-sidebar'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;

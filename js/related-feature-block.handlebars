@@ -35,18 +35,24 @@
             font-size: 32px;
             font-weight: bold;
         }
+
+        .related-block a:hover {
+            text-decoration: none;
+        }
     </style>
 
+    <div class="related-block">
+        <div class="solo_triple">
+        </div>
+
+        <h3 class="section-name freeform-exclusive" style="text-align:left;">Related Feature</h3>
+
+        <a href="{{storyLink}}" title="{{headline}}">
+            <h2 class="freeform-cp-headline">{{headline}}</h2>
+            <img class="freeform-cp-photo" src="{{image}}">
+        </a>
+
+        <p class="freeform-cp-subhead">{{chatter}}</p>
+    </div>
+
 </xmp>
-
-<div class="solo_triple">
-</div>
-
-<h3 class="section-name freeform-exclusive" style="text-align:left;">Related Feature</h3>
-
-<a href="{{storyLink}}" title="{{headline}}">
-    <h2 class="freeform-cp-headline">{{headline}}</h2>
-    <img class="freeform-cp-photo" src="{{image}}">
-</a>
-
-<p class="freeform-cp-subhead">{{chatter}}</p>

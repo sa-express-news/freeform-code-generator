@@ -10,6 +10,9 @@ document.getElementById('copy-atf-code').addEventListener('click', copyAtfCode);
 document.getElementById('related-sidebar-form').addEventListener('submit', sidebarSubmit);
 document.getElementById('copy-sidebar-code').addEventListener('click', copySidebarCode);
 
+document.getElementById('related-featureBlock-form').addEventListener('submit', featureBlockSubmit);
+document.getElementById('copy-featureBlock-code').addEventListener('click', copyFeatureBlockCode);
+
 function iframeSubmit(event) {
     event.preventDefault();
     var headline = document.getElementById('iframeheadline').value;
@@ -91,6 +94,24 @@ function sidebarSubmit(event) {
     displayCopyButton('#copy-sidebar-code');
 }
 
+function featureBlockSubmit(event) {
+    event.preventDefault();
+    var headline = document.getElementById('featureBlockHeadline').value;
+    var chatter = document.getElementById('featureBlockChatter').value;
+    var link = document.getElementById('featureBlockLink').value.trim();
+    var image = document.getElementById('featureBlockImage').value.trim();
+
+    var context = {
+        storyLink: link,
+        image: image,
+        headline: headline,
+        chatter: chatter
+    };
+
+    generateTemplateCode('related-feature-block', context, 'div.featureBlock-code-container');
+    displayCopyButton('#copy-featureBlock-code');
+}
+
 function generateTemplateCode(handlebarsTemplate, context, selector) {
     var html = Handlebars.templates[handlebarsTemplate](context);
     var target = document.querySelector(selector);
@@ -130,6 +151,10 @@ function copyAtfCode() {
 
 function copySidebarCode() {
     return copyContentsOfSelector('div.sidebar-code-container');
+}
+
+function copyFeatureBlockCode() {
+    return copyContentsOfSelector('div.featureBlock-code-container');
 }
 
 

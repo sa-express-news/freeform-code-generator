@@ -16,13 +16,16 @@
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#iframeformcontainer" role="tab" aria-controls="home" aria-expanded="true">iFrame/Video</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#storyformcontainer" role="tab" aria-controls="profile">Story</a>
+            <a class="nav-link" data-toggle="tab" href="#storyformcontainer" role="tab" aria-controls="profile">Story</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#atfformcontainer" role="tab" aria-controls="profile">ATF</a>
+            <a class="nav-link" data-toggle="tab" href="#atfformcontainer" role="tab" aria-controls="profile">ATF</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#relatedSidebarContainer" role="tab" aria-controls="profile">Related Sidebar</a>
+            <a class="nav-link" data-toggle="tab" href="#relatedSidebarContainer" role="tab" aria-controls="profile">Related Sidebar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#relatedFeatureContainer" role="tab" aria-controls="profile">Related Feature Block</a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -167,6 +170,39 @@
                     <div class='sidebar-code-container'>
                     </div>
                     <button class="btn btn-primary copy-button" id="copy-sidebar-code">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="relatedFeatureContainer" role="tabpanel" aria-labelledby="related-sidebar-tab">
+            <div class="main-container">
+                <div class="form-container">
+                    <form id="related-featureBlock-form">
+                        <div class="form-group">
+                            <label for="featureBlockHeadline" class='bold'>Headline</label>
+                            <input type="text" class="form-control" id="featureBlockHeadline" placeholder="Boerne still charms but growth beckons" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="featureBlockChatter">Chatter/subhead</label>
+                            <textarea class="form-control" id="featureBlockChatter" rows="3" placeholder="Good schools and quality of life have driven rapid growth in Boerne and the rest of Kendall County. But how does a small
+                                            town handle sudden urbanization and affluence?" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="featureBlockLink">Link to published story</label>
+                            <textarea class="form-control" id="featureBlockLink" rows="3" placeholder="http://www.expressnews.com/news/local/article/Boerne-boom-comes-at-a-price-12241509.php"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="featureBlockImage" class='bold'>Image Link</label>
+                            <textarea class="form-control" id="featureBlockImage" rows="3" placeholder="http://ww2.hdnux.com/photos/66/26/15/14246721/3/rawImage.jpg - remember to change the end to rawImage!"
+                                required></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="build-featureBlock">Build freeform</button>
+                    </form>
+                </div>
+                <div>
+                    <div class='featureBlock-code-container'>
+                    </div>
+                    <button class="btn btn-primary copy-button" id="copy-featureBlock-code">Copy</button>
                 </div>
             </div>
         </div>

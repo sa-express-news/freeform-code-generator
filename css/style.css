@@ -17,6 +17,11 @@ xmp {
 	display: none;
 }
 
+img.example{
+	max-width: 100%;
+	height: auto;
+}
+
 @media (min-width: 800px){
 	div.main-container{
 		display: flex;
