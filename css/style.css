@@ -17,7 +17,11 @@ xmp {
 	display: none;
 }
 
-img.example{
+.example-container{
+	margin-top: 1em;
+}
+
+.example-container img{
 	max-width: 100%;
 	height: auto;
 }

@@ -1,3 +1,11 @@
+// Set up the 'toggle example' buttons + images as Vue components
+var videoToggle = generateExampleVueComponent('#video-vue');
+var storyToggle = generateExampleVueComponent('#story-vue');
+var atfToggle = generateExampleVueComponent('#atf-vue');
+
+var featureBlockAToggle = generateExampleVueComponent('#related-block-a-vue');
+
+
 document.getElementById('iframe-form').addEventListener('submit', iframeSubmit);
 document.getElementById('copy-iframe-code').addEventListener('click', copyiFrameCode);
 
@@ -172,4 +180,18 @@ function scrubDivFromIframe(string) {
     div.innerHTML = string;
     div.innerHTML = div.getElementsByTagName('div')[0].innerHTML;
     return div.innerHTML;
+}
+
+function generateExampleVueComponent(elementSelector) {
+    return new Vue({
+        el: elementSelector,
+        data: {
+            show: false
+        },
+        methods: {
+            toggle: function (event) {
+                this.show = !this.show;
+            }
+        }
+    })
 }

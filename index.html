@@ -56,6 +56,10 @@
                         </div>
                         <button class="btn btn-primary" id="build-iframe">Build freeform</button>
                     </form>
+                    <div id="video-vue" class="example-container">
+                        <button v-on:click="toggle" class="btn btn-primary">Toggle example</button>
+                        <img v-if="show" class="example" src="http://ww3.hdnux.com/photos/67/44/31/14566986/4/rawImage.jpg" alt="">
+                    </div>
                 </div>
                 <div>
                     <div class='iframe-code-container'>
@@ -99,6 +103,10 @@
                         </div>
                         <button class="btn btn-primary" id="build-story">Build freeform</button>
                     </form>
+                    <div id="story-vue" class="example-container">
+                        <button v-on:click="toggle" class="btn btn-primary">Toggle example</button>
+                        <img v-if="show" class="example" src="http://ww2.hdnux.com/photos/67/44/32/14567073/4/920x1240.jpg" alt="">
+                    </div>
                 </div>
                 <div>
                     <div class='story-code-container'>
@@ -132,6 +140,10 @@
                         </div>
                         <button class="btn btn-primary" id="build-atf">Build freeform</button>
                     </form>
+                    <div id="atf-vue" class="example-container">
+                        <button v-on:click="toggle" class="btn btn-primary">Toggle example</button>
+                        <img v-if="show" class="example" src="http://ww2.hdnux.com/photos/67/44/30/14566929/4/rawImage.jpg" alt="">
+                    </div>
                 </div>
                 <div>
                     <div class='atf-code-container'>
@@ -198,6 +210,10 @@
                         </div>
                         <button class="btn btn-primary" id="build-featureBlock">Build freeform</button>
                     </form>
+                    <div id="related-block-a-vue" class="example-container">
+                        <button v-on:click="toggle" class="btn btn-primary">Toggle example</button>
+                        <img v-if="show" class="example" src="http://ww4.hdnux.com/photos/67/44/25/14566759/4/rawImage.jpg" alt="">
+                    </div>
                 </div>
                 <div>
                     <div class='featureBlock-code-container'>
@@ -213,6 +229,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/templates.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="js/index.js"></script>
 </body>
 
