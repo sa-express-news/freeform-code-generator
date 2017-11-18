@@ -25,7 +25,10 @@
             <a class="nav-link" data-toggle="tab" href="#relatedSidebarContainer" role="tab" aria-controls="profile">Related Sidebar</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#relatedFeatureContainer" role="tab" aria-controls="profile">Related Feature Block</a>
+            <a class="nav-link" data-toggle="tab" href="#relatedFeatureContainer" role="tab" aria-controls="profile">Related Feature Block A</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#relatedFeatureBContainer" role="tab" aria-controls="profile">Related Feature Block B</a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -219,6 +222,43 @@
                     <div class='featureBlock-code-container'>
                     </div>
                     <button class="btn btn-primary copy-button" id="copy-featureBlock-code">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="relatedFeatureBContainer" role="tabpanel" aria-labelledby="related-sidebar-tab">
+            <div class="main-container">
+                <div class="form-container">
+                    <form id="related-featureBlockB-form">
+                        <div class="form-group">
+                            <label for="featureBlockBHeadline" class='bold'>Headline</label>
+                            <input type="text" class="form-control" id="featureBlockBHeadline" placeholder="5 hot soup recipes to warm your soul" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="featureBlockBChatter">Chatter/subhead</label>
+                            <textarea class="form-control" id="featureBlockBChatter" rows="3" placeholder="Soup is that magical elixir that warms both the body and spirit."
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="featureBlockBLink">Link to published story</label>
+                            <textarea class="form-control" id="featureBlockBLink" rows="3" placeholder="http://www.expressnews.com/lifestyle/article/5-hot-soup-recipes-to-warm-your-soul-12311593.php"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="featureBlockBImage" class='bold'>Image Link</label>
+                            <textarea class="form-control" id="featureBlockBImage" rows="3" placeholder="http://ww2.hdnux.com/photos/57/01/61/12328045/13/920x1240.jpg - remember to change the end to 920x1240!"
+                                required></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="build-featureBlockB">Build freeform</button>
+                    </form>
+                    <div id="related-block-b-vue" class="example-container">
+                        <button v-on:click="toggle" class="btn btn-primary">Toggle example</button>
+                        <img v-if="show" class="example" src="http://ww1.hdnux.com/photos/67/44/35/14567248/4/920x1240.jpg" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class='featureBlockB-code-container'>
+                    </div>
+                    <button class="btn btn-primary copy-button" id="copy-featureBlockB-code">Copy</button>
                 </div>
             </div>
         </div>

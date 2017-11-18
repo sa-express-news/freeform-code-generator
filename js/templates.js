@@ -62,6 +62,21 @@ templates['iframe'] = template({"1":function(container,depth0,helpers,partials,d
     + ((stack1 = ((helper = (helper = helpers.iframe || (depth0 != null ? depth0.iframe : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"iframe","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "\n    </div>\n</xmp>";
 },"useData":true});
+templates['related-feature-block-b'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "<xmp>\n    <style>\n        .fancy-refer-link {\n            background: #FDFDFD;\n        }\n\n        .fancy-refer-link img {\n            height: auto;\n            max-width: 100%;\n        }\n\n        .fancy-refer-link h4 {\n            background: #222;\n            color: #FAFAFA;\n            font-family: 'Sanchez Black', serif;\n            font-size: 17px;\n            font-weight: normal;\n            line-height: 1em;\n            margin-bottom: .33em;\n            padding: .25em 0 .25em .25em;\n            text-transform: capitalize;\n        }\n\n        .fancy-refer-link p {\n            line-height: 20px;\n            margin: 0;\n        }\n\n        .fancy-refer-link .headline {\n            font-weight: bold;\n            margin-bottom: .5em;\n        }\n\n        .fancy-refer-link .chatter {\n            font-size: 16px;\n        }\n\n        @media(min-width: 768px) {\n            .fancy-refer-link {\n                display: flex;\n                flex-flow: row nowrap;\n                justify-content: space-between;\n            }\n            .fancy-refer-link div {\n                flex-basis: 48%;\n            }\n        }\n    </style>\n\n    <div class=\"fancy-refer-link-container\">\n        <a href=\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\" title=\""
+    + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
+    + "\">\n            <div class=\"fancy-refer-link\">\n                <div class=\"img-container\">\n                    <img src=\""
+    + alias4(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image","hash":{},"data":data}) : helper)))
+    + "\">\n                </div>\n                <div class=\"text-container\">\n                    <h4>More from the Express-News</h4>\n                    <p class=\"headline\">"
+    + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
+    + "</p>\n                    <p class=\"chatter\">"
+    + alias4(((helper = (helper = helpers.chatter || (depth0 != null ? depth0.chatter : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"chatter","hash":{},"data":data}) : helper)))
+    + "\n                    </p>\n                </div>\n            </div>\n        </a>\n    </div>\n</xmp>";
+},"useData":true});
 templates['related-feature-block'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 

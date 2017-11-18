@@ -1,0 +1,65 @@
+<xmp>
+    <style>
+        .fancy-refer-link {
+            background: #FDFDFD;
+        }
+
+        .fancy-refer-link img {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .fancy-refer-link h4 {
+            background: #222;
+            color: #FAFAFA;
+            font-family: 'Sanchez Black', serif;
+            font-size: 17px;
+            font-weight: normal;
+            line-height: 1em;
+            margin-bottom: .33em;
+            padding: .25em 0 .25em .25em;
+            text-transform: capitalize;
+        }
+
+        .fancy-refer-link p {
+            line-height: 20px;
+            margin: 0;
+        }
+
+        .fancy-refer-link .headline {
+            font-weight: bold;
+            margin-bottom: .5em;
+        }
+
+        .fancy-refer-link .chatter {
+            font-size: 16px;
+        }
+
+        @media(min-width: 768px) {
+            .fancy-refer-link {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+            }
+            .fancy-refer-link div {
+                flex-basis: 48%;
+            }
+        }
+    </style>
+
+    <div class="fancy-refer-link-container">
+        <a href="{{link}}" title="{{headline}}">
+            <div class="fancy-refer-link">
+                <div class="img-container">
+                    <img src="{{image}}">
+                </div>
+                <div class="text-container">
+                    <h4>More from the Express-News</h4>
+                    <p class="headline">{{headline}}</p>
+                    <p class="chatter">{{chatter}}
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</xmp>

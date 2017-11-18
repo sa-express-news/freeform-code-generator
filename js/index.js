@@ -4,6 +4,7 @@ var storyToggle = generateExampleVueComponent('#story-vue');
 var atfToggle = generateExampleVueComponent('#atf-vue');
 
 var featureBlockAToggle = generateExampleVueComponent('#related-block-a-vue');
+var featureBlockBToggle = generateExampleVueComponent('#related-block-b-vue');
 
 
 document.getElementById('iframe-form').addEventListener('submit', iframeSubmit);
@@ -20,6 +21,9 @@ document.getElementById('copy-sidebar-code').addEventListener('click', copySideb
 
 document.getElementById('related-featureBlock-form').addEventListener('submit', featureBlockSubmit);
 document.getElementById('copy-featureBlock-code').addEventListener('click', copyFeatureBlockCode);
+
+document.getElementById('related-featureBlockB-form').addEventListener('submit', featureBlockBSubmit);
+document.getElementById('copy-featureBlockB-code').addEventListener('click', copyFeatureBlockBCode);
 
 function iframeSubmit(event) {
     event.preventDefault();
@@ -119,6 +123,23 @@ function featureBlockSubmit(event) {
     generateTemplateCode('related-feature-block', context, 'div.featureBlock-code-container');
     displayCopyButton('#copy-featureBlock-code');
 }
+function featureBlockBSubmit(event) {
+    event.preventDefault();
+    var headline = document.getElementById('featureBlockBHeadline').value;
+    var chatter = document.getElementById('featureBlockBChatter').value;
+    var link = document.getElementById('featureBlockBLink').value.trim();
+    var image = document.getElementById('featureBlockBImage').value.trim();
+
+    var context = {
+        storyLink: link,
+        image: image,
+        headline: headline,
+        chatter: chatter
+    };
+
+    generateTemplateCode('related-feature-block-b', context, 'div.featureBlockB-code-container');
+    displayCopyButton('#copy-featureBlockB-code');
+}
 
 function generateTemplateCode(handlebarsTemplate, context, selector) {
     var html = Handlebars.templates[handlebarsTemplate](context);
@@ -163,6 +184,10 @@ function copySidebarCode() {
 
 function copyFeatureBlockCode() {
     return copyContentsOfSelector('div.featureBlock-code-container');
+}
+
+function copyFeatureBlockBCode() {
+    return copyContentsOfSelector('div.featureBlockB-code-container');
 }
 
 
