@@ -1,0 +1,76 @@
+<xmp>
+    <style>
+        img.podcastImage {
+            float: left;
+            padding-right: 10px;
+            width: 72px;
+        }
+
+        .podtext {
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+
+        .audioContainer {
+            margin-bottom: .5em;
+        }
+
+        .controlContainer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
+
+        .controlContainer .play {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .controlContainer .time,
+        .controlContainer .play {
+            margin: auto 0;
+        }
+
+        .scrubberContainer {
+            flex-basis: 50%;
+            margin: auto 0;
+            position: relative;
+        }
+
+        .scrubberContainer div {
+            position: absolute;
+        }
+
+        .scrubberContainer .length {
+            background-color: gray;
+            height: 5px;
+            width: 100%;
+        }
+
+        .scrubberContainer .progress {
+            background-color: black;
+            height: 5px;
+            width: 0px;
+            z-index: 5;
+        }
+    </style>
+    <div class="podContainer">
+        <img class="podcastImage" src="//ww2.hdnux.com/photos/70/02/62/14691469/4/500x500.png">
+        <h2 class="podhed">Start your day with local news</h2>
+        <p class="podtext">{{chatter}}</p>
+        <div class="audioContainer">
+            <audio preload="auto" src="{{file}}"></audio>
+            <div class="controlContainer">
+                <p class="play">►</p>
+                <div class="scrubberContainer">
+                    <div class="length"></div>
+                    <div class="progress"></div>
+                </div>
+                <div class="time">
+                    <span class="current">0:00</span> /
+                    <span class="duration"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</xmp>

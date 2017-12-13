@@ -30,6 +30,9 @@
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#relatedFeatureBContainer" role="tab" aria-controls="profile">Related Feature Block B</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#expressBriefingContainer" role="tab" aria-controls="profile">Express Briefing</a>
+        </li>
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="iframeformcontainer" role="tabpanel" aria-labelledby="iframe-tab">
@@ -259,6 +262,30 @@
                     <div class='featureBlockB-code-container'>
                     </div>
                     <button class="btn btn-primary copy-button" id="copy-featureBlockB-code">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="expressBriefingContainer" role="tabpanel" aria-labelledby="related-sidebar-tab">
+            <div class="main-container">
+                <div class="form-container">
+                    <form id="express-briefing-form">
+                        <div class="form-group">
+                            <label for="expressBriefingChatter" class='bold'>Chatter/episode description</label>
+                            <textarea type="text" class="form-control" id="expressBriefingChatter" placeholder="Kawhi is back, a former SAISD official faces bribery-related charges and a legendary Tejano artist will perform in San Antonio
+                            for New Year's Eve." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="expressBriefingFile">Link to MP3 file</label>
+                            <textarea class="form-control" id="expressBriefingFile" rows="3" placeholder="http://www.expressnews.com/file/258/4/2584-EB12132017.mp3"
+                                required></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="build-expressBriefing">Build freeform</button>
+                    </form>
+                </div>
+                <div>
+                    <div class='expressBriefing-code-container'>
+                    </div>
+                    <button class="btn btn-primary copy-button" id="copy-expressBriefing-code">Copy</button>
                 </div>
             </div>
         </div>

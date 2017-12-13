@@ -25,6 +25,9 @@ document.getElementById('copy-featureBlock-code').addEventListener('click', copy
 document.getElementById('related-featureBlockB-form').addEventListener('submit', featureBlockBSubmit);
 document.getElementById('copy-featureBlockB-code').addEventListener('click', copyFeatureBlockBCode);
 
+document.getElementById('express-briefing-form').addEventListener('submit', expressBriefingSubmit);
+document.getElementById('copy-expressBriefing-code').addEventListener('click', copyExpressBriefingCode);
+
 function iframeSubmit(event) {
     event.preventDefault();
     var headline = document.getElementById('iframeheadline').value;
@@ -141,6 +144,20 @@ function featureBlockBSubmit(event) {
     displayCopyButton('#copy-featureBlockB-code');
 }
 
+function expressBriefingSubmit(event) {
+    event.preventDefault();
+    var chatter = document.getElementById('expressBriefingChatter').value;
+    var file = document.getElementById('expressBriefingFile').value;
+
+    var context = {
+        chatter: chatter,
+        file: file
+    };
+
+    generateTemplateCode('express-briefing', context, 'div.expressBriefing-code-container');
+    displayCopyButton('#copy-expressBriefing-code');
+}
+
 function generateTemplateCode(handlebarsTemplate, context, selector) {
     var html = Handlebars.templates[handlebarsTemplate](context);
     var target = document.querySelector(selector);
@@ -188,6 +205,10 @@ function copyFeatureBlockCode() {
 
 function copyFeatureBlockBCode() {
     return copyContentsOfSelector('div.featureBlockB-code-container');
+}
+
+function copyExpressBriefingCode() {
+    return copyContentsOfSelector('div.expressBriefing-code-container')
 }
 
 
