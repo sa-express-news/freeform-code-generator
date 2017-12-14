@@ -160,6 +160,7 @@ function expressBriefingSubmit(event) {
 
 function generateTemplateCode(handlebarsTemplate, context, selector) {
     var html = Handlebars.templates[handlebarsTemplate](context);
+    console.log(html.toString());
     var target = document.querySelector(selector);
     target.innerHTML = html;
 }

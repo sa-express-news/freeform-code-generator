@@ -18,7 +18,7 @@
         .controlContainer {
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         .controlContainer .play {
@@ -52,6 +52,23 @@
             height: 5px;
             width: 0px;
             z-index: 5;
+        }
+
+        .article-text .podContainer {
+            background: #f7f7f7;
+        }
+
+        .article-text .podtext {
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+
+        .article-text .controlContainer {
+            justify-content: space-between;
+        }
+
+        .article-text .controlContainer .play {
+            flex-basis: 20%;
         }
     </style>
     <div class="podContainer">
