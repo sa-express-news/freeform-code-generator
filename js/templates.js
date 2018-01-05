@@ -41,11 +41,11 @@ templates['iframe'] = template({"1":function(container,depth0,helpers,partials,d
 },"3":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "\n    <h2 class=\"freeform-iframe-headline\"><a href=\""
+  return "\n    <h2 class=\"freeform-iframe-headline\">\n        <a href=\""
     + alias4(((helper = (helper = helpers.storyLink || (depth0 != null ? depth0.storyLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"storyLink","hash":{},"data":data}) : helper)))
     + "\">"
     + alias4(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headline","hash":{},"data":data}) : helper)))
-    + "</a></h2>\n";
+    + "</a>\n    </h2>\n";
 },"5":function(container,depth0,helpers,partials,data) {
     var helper;
 
@@ -61,7 +61,7 @@ templates['iframe'] = template({"1":function(container,depth0,helpers,partials,d
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {});
 
-  return "<xmp>\n    <style>\n        h3.freeform-iframe-exclusive {\n            text-align: center;\n        }\n\n        h2.freeform-iframe-headline {\n            font-family: Pierpont-bold, serif;\n            font-size: 42px;\n            line-height: 36px;\n            margin: 1% auto;\n            text-align: center;\n        }\n\n        p.freeform-iframe-subhead {\n            font-family: Georgia, serif;\n            font-size: 18px;\n            text-align: center;\n        }\n\n        .vidWrapper {\n            margin-bottom: 1em;\n            position: relative;\n            padding-bottom: 56.25%;\n            padding-top: 25px;\n            height: 0;\n        }\n\n        .vidWrapper iframe {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 94%;\n        }\n    </style>\n"
+  return "<xmp>\n    <style>\n        h3.freeform-iframe-exclusive {\n            text-align: center;\n        }\n\n        h2.freeform-iframe-headline {\n            font-family: Pierpont-bold, serif;\n            font-size: 42px;\n            line-height: 36px;\n            margin: 1% auto;\n            text-align: center;\n        }\n\n        .zone-5 h2.freeform-iframe-headline {\n            font-size: 29px;\n            font-weight: normal;\n            line-height: 31px;\n        }\n\n        @media (min-width: 1280px) {\n            .zone-5 h2.freeform-iframe-headline {\n                font-size: 26px;\n            }\n        }\n\n        p.freeform-iframe-subhead {\n            font-family: Georgia, serif;\n            font-size: 18px;\n            text-align: center;\n        }\n\n        .vidWrapper {\n            margin-bottom: 1em;\n            position: relative;\n            padding-bottom: 56.25%;\n            padding-top: 25px;\n            height: 0;\n        }\n\n        .vidWrapper iframe {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 94%;\n        }\n    </style>\n"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.exclusive : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + " "
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.storyLink : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.program(5, data, 0),"data":data})) != null ? stack1 : "")

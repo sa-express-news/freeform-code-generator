@@ -12,6 +12,18 @@
             text-align: center;
         }
 
+        .zone-5 h2.freeform-iframe-headline {
+            font-size: 29px;
+            font-weight: normal;
+            line-height: 31px;
+        }
+
+        @media (min-width: 1280px) {
+            .zone-5 h2.freeform-iframe-headline {
+                font-size: 26px;
+            }
+        }
+
         p.freeform-iframe-subhead {
             font-family: Georgia, serif;
             font-size: 18px;
@@ -36,7 +48,9 @@
     </style>
     {{#if exclusive}}
     <h3 class="freeform-iframe-exclusive section-name">ExpressNews.com Exclusive</h3> {{/if}} {{#if storyLink}}
-    <h2 class="freeform-iframe-headline"><a href="{{storyLink}}">{{headline}}</a></h2>
+    <h2 class="freeform-iframe-headline">
+        <a href="{{storyLink}}">{{headline}}</a>
+    </h2>
     {{else}}
     <h2 class="freeform-iframe-headline">{{headline}}</h2>
     {{/if}} {{#if chatter}}
